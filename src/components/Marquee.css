@@ -1,0 +1,18 @@
+.marquee-wrap {
+  overflow: hidden;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 1rem 0; background: #070706;
+}
+.marquee-track {
+  display: flex; gap: 0;
+  animation: marquee 28s linear infinite;
+  white-space: nowrap; width: max-content;
+}
+.marquee-item {
+  font-family: var(--mono); font-size: .56rem;
+  letter-spacing: .2em; text-transform: uppercase;
+  color: var(--mid); padding: 0 2.25rem;
+  display: flex; align-items: center; gap: 2.25rem;
+}
+.marquee-item::after { content: '◆'; color: var(--gold); font-size: .32rem; }
