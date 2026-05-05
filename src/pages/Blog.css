@@ -1,0 +1,4 @@
+.blog-page-header {
+  padding: 5.5rem var(--sp) 2rem;
+  position: relative; z-index: 2;
+}

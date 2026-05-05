@@ -1,0 +1,59 @@
+.navbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 500;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: .85rem clamp(1.25rem,5vw,3rem);
+  background: rgba(11,22,41,.88); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--line);
+}
+.nav-brand {
+  display: flex; align-items: center; gap: .65rem; cursor: pointer;
+}
+.nav-logo { width: 34px; height: 34px; border-radius: 50%; border: 1.5px solid var(--cyan); object-fit: cover; }
+.nav-name {
+  font-family: 'Bebas Neue', sans-serif; font-size: 1.05rem; letter-spacing: .1em; color: var(--white);
+}
+.nav-name em { color: var(--cyan); font-style: normal; }
+.nav-links { display: flex; gap: 0; list-style: none; }
+.nav-links a {
+  font-family: 'Outfit', sans-serif; font-size: .6rem; font-weight: 500;
+  letter-spacing: .1em; text-transform: uppercase; color: var(--muted);
+  text-decoration: none; padding: .35rem .85rem; transition: color .2s;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--cyan); }
+.nav-cta {
+  font-family: 'Outfit', sans-serif; font-size: .6rem; font-weight: 700;
+  letter-spacing: .12em; text-transform: uppercase;
+  color: var(--navy); background: var(--cyan);
+  padding: .5rem 1.2rem; text-decoration: none; transition: background .2s; white-space: nowrap;
+}
+.nav-cta:hover { background: var(--gold); }
+.ham {
+  display: none; flex-direction: column; gap: 5px;
+  background: none; border: none; cursor: pointer; padding: .3rem;
+}
+.ham span { display: block; width: 20px; height: 1.5px; background: var(--cyan); transition: all .3s; }
+.ham.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.ham.open span:nth-child(2) { opacity: 0; }
+.ham.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+.mob-menu {
+  display: none; position: fixed; inset: 0; z-index: 400;
+  background: rgba(11,22,41,.97);
+  flex-direction: column; align-items: center; justify-content: center; gap: 1.75rem;
+  opacity: 0; transition: opacity .3s;
+}
+.mob-menu.open { display: flex; opacity: 1; }
+.mob-menu a {
+  font-family: 'Bebas Neue', sans-serif; font-size: 2.2rem; letter-spacing: .05em;
+  color: var(--white); text-decoration: none; transition: color .2s;
+}
+.mob-menu a:hover, .mob-menu a.active { color: var(--cyan); }
+.mob-cta {
+  font-family: 'Outfit', sans-serif !important; font-size: .72rem !important; font-weight: 700;
+  letter-spacing: .15em; text-transform: uppercase;
+  color: var(--navy) !important; background: var(--cyan);
+  padding: .9rem 2.5rem; margin-top: .75rem; text-decoration: none;
+}
+@media (max-width: 820px) {
+  .nav-links, .nav-cta { display: none; }
+  .ham { display: flex; }
+}
