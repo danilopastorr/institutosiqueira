@@ -125,7 +125,7 @@ export default function Blog() {
             <div style={{textAlign:'center',padding:'5rem 1rem'}}>
               <div style={{fontSize:'3rem',marginBottom:'1rem'}}>✍</div>
               <h2 style={{fontFamily:"'Playfair Display',serif",fontSize:'1.5rem',color:'var(--white)',marginBottom:'.75rem'}}>Em breve os primeiros artigos.</h2>
-              <p style={{color:'var(--muted)',fontSize:'.9rem'}}>Enquanto isso, siga <a href="https://instagram.com/engenheirodamente" target="_blank" rel="noopener noreferrer" style={{color:'var(--cyan)'}}>@engenheirodamente</a></p>
+              <p style={{color:'var(--muted)',fontSize:'.9rem'}}>Enquanto isso, siga <a href="https://www.instagram.com/paulosiqueira.vox/" target="_blank" rel="noopener noreferrer" style={{color:'var(--cyan)'}}>@paulosiqueira.vox</a></p>
               <button className="btn-c" onClick={()=>nav('/contato')} style={{marginTop:'2rem'}}>Falar com Paulinho</button>
             </div>
           )}
